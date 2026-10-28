@@ -1,11 +1,13 @@
-﻿cff-version: 1.2.0
+﻿
+cff-version: 1.2.0
 message: "If you use K-TRACE in your research, please cite the associated research article."
 title: "K-TRACE: Evidence-Grounded Intrusion Analysis and Controlled Response for Kubernetes Security"
 type: software
 authors:
-  - family-names: "Iheb_Kcharem"
+  - family-names: "Kcharem"
     given-names: "Iheb"
 version: 1.0.0
 date-released: "2026-10-28"
 abstract: "Research prototype for evaluating evidence-grounded intrusion analysis, evidence retrieval, LLM-assisted incident analysis, and deterministic response-policy selection in cloud-native Kubernetes environments."
 license: MIT
+url: "https://github.com/kcharemiheb-23/K-TRACE"
