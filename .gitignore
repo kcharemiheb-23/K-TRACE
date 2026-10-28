@@ -15,3 +15,22 @@ artifacts/phase9_v2/plots/
 *.log
 *.tmp
 artifacts/phase10U/vectorstore_v2/
+
+# Temporary and backup files
+*.bak
+*.orig
+*.rej
+*~
+
+# Python-generated files
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# Local IDE and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
