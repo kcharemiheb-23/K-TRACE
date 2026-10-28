@@ -34,3 +34,27 @@ venv/
 .idea/
 .DS_Store
 Thumbs.db
+
+# Python-generated files
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Temporary and backup files
+*.bak
+*.backup
+*.tmp
+*.log
+
+# Generated retrieval indexes
+artifacts/**/vectorstore/
+artifacts/**/bm25/bm25_index.pkl
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+
+.pytest_cache/
+.ipynb_checkpoints/

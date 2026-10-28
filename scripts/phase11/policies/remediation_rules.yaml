@@ -1,0 +1,97 @@
+# Phase 11 deterministic remediation policy.
+# Severity and action are selected by (family, intensity) lookup.
+# Modify only with a Git commit and a justification line in the commit message.
+
+# Severity labels: LOW | MEDIUM | HIGH
+# Action ids: NONE | WARN | ISOLATE_POD | RATE_LIMIT_OR_DENY
+
+defaults:
+  unknown_intensity: medium     # if intensity is missing, treat as medium
+  unknown_family_severity: LOW
+  unknown_family_action: WARN
+
+rules:
+  A1_HTTP_PORTFLOOD:
+    low:
+      severity: LOW
+      action: WARN
+      note: "Subtle HTTP flood; warn analyst, no containment."
+    medium:
+      severity: MEDIUM
+      action: RATE_LIMIT_OR_DENY
+      note: "Visible HTTP flood from attacker namespace; deny ingress to frontend."
+    high:
+      severity: HIGH
+      action: RATE_LIMIT_OR_DENY
+      note: "Strong HTTP flood; deny attacker namespace -> frontend."
+
+  A2_INVALID_REQUEST_SPRAY:
+    low:
+      severity: LOW
+      action: WARN
+      note: "Low-rate malformed traffic; warn only."
+    medium:
+      severity: MEDIUM
+      action: RATE_LIMIT_OR_DENY
+      note: "Application-layer probing visible; deny attacker namespace."
+    high:
+      severity: HIGH
+      action: RATE_LIMIT_OR_DENY
+      note: "Sustained spray; deny source-namespace traffic to frontend."
+
+  A3_RUNTIME_RECON:
+    low:
+      severity: MEDIUM
+      action: ISOLATE_POD
+      note: "Any in-container recon is suspicious; isolate source pod."
+    medium:
+      severity: HIGH
+      action: ISOLATE_POD
+      note: "Active filesystem and process discovery; isolate source pod."
+    high:
+      severity: HIGH
+      action: ISOLATE_POD
+      note: "Aggressive recon; isolate source pod."
+
+  A4_EXPLOIT_LIKE_PAYLOADS:
+    low:
+      severity: MEDIUM
+      action: RATE_LIMIT_OR_DENY
+      note: "Exploit-like payloads against frontend; deny attacker namespace."
+    medium:
+      severity: HIGH
+      action: RATE_LIMIT_OR_DENY
+      note: "Sustained exploit attempts; deny attacker namespace."
+    high:
+      severity: HIGH
+      action: RATE_LIMIT_OR_DENY
+      note: "Aggressive exploit traffic; deny attacker namespace."
+
+  BENIGN:
+    none:
+      severity: LOW
+      action: NONE
+      note: "Benign run; no response."
+
+# Apply-mode allowlist. The executor refuses to apply manifests that target
+# anything outside these constraints, even if rendered by a template.
+apply_guardrails:
+  allowed_target_namespaces:
+    - app
+  forbidden_target_pod_names:
+    # Online Boutique core services - never touch.
+    - frontend
+    - cartservice
+    - checkoutservice
+    - paymentservice
+    - shippingservice
+    - emailservice
+    - currencyservice
+    - productcatalogservice
+    - recommendationservice
+    - adservice
+    - redis-cart
+    - loadgenerator
+  allowed_attacker_pod_prefixes:
+    - falco-test
+    - attacker

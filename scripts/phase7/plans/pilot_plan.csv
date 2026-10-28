@@ -1,0 +1,7 @@
+run_id,class_label,scenario_family,subtype,intensity,benign_type,source_namespace,source_pod,target_scope,duration_sec,trim_start_sec,trim_end_sec,payload_cmd
+PILOT_BENIGN_CONTROLLED_NORMAL_001,BENIGN,BENIGN,CONTROLLED_NORMAL,none,CONTROLLED,app,loadgenerator,frontend,180,10,10,"bash ""/home/azureuser/cloud-native-ids-azure/scripts/phase7/02_benign_controlled_normal.sh"" 180"
+PILOT_BENIGN_CONTINUOUS_BROWSE_001,BENIGN,BENIGN,CONTINUOUS_BROWSE,none,CONTINUOUS,app,benign-browser,frontend,300,10,10,"bash ""/home/azureuser/cloud-native-ids-azure/scripts/phase7/05_benign_continuous_browse.sh"" 300"
+PILOT_A1_LOW_001,A1_HTTP_PORTFLOOD,ATTACK,A1_HTTP_PORTFLOOD,low,NA,attacks,netshoot,internal_app_services,120,10,10,"bash ""/home/azureuser/cloud-native-ids-azure/scripts/phase7/11_attack_http_portflood.sh"" 120 low"
+PILOT_A2_LOW_001,A2_INVALID_REQUEST_SPRAY,ATTACK,A2_INVALID_REQUEST_SPRAY,low,NA,attacks,netshoot,frontend_http,120,10,10,"bash ""/home/azureuser/cloud-native-ids-azure/scripts/phase7/12_attack_invalid_request_spray.sh"" 120 low"
+PILOT_A3_LOW_001,A3_RUNTIME_RECON,ATTACK,A3_RUNTIME_RECON,low,NA,app,falco-test,in_container_runtime,120,10,10,"bash ""/home/azureuser/cloud-native-ids-azure/scripts/phase7/13_attack_runtime_recon.sh"" 120 low"
+PILOT_A4_LOW_001,A4_EXPLOIT_LIKE_PAYLOADS,ATTACK,A4_EXPLOIT_LIKE_PAYLOADS,low,NA,attacks,netshoot,frontend_http,120,10,10,"bash ""/home/azureuser/cloud-native-ids-azure/scripts/phase7/14_attack_exploit_like_payloads.sh"" 120 low"

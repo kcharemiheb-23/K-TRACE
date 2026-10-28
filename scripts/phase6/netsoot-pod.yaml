@@ -1,0 +1,136 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  creationTimestamp: "2026-04-02T10:16:43Z"
+  generation: 1
+  labels:
+    run: netshoot
+  name: netshoot
+  namespace: attacks
+  resourceVersion: "66359"
+  uid: cad3be1a-9593-4b96-926b-285cc8b24b38
+spec:
+  containers:
+  - args:
+    - sleep
+    - "900000"
+    image: nicolaka/netshoot
+    imagePullPolicy: Always
+    name: netshoot
+    resources: {}
+    terminationMessagePath: /dev/termination-log
+    terminationMessagePolicy: File
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-cng5h
+      readOnly: true
+  dnsPolicy: ClusterFirst
+  enableServiceLinks: true
+  nodeName: intrusion-detection
+  preemptionPolicy: PreemptLowerPriority
+  priority: 0
+  restartPolicy: Never
+  schedulerName: default-scheduler
+  securityContext: {}
+  serviceAccount: default
+  serviceAccountName: default
+  terminationGracePeriodSeconds: 30
+  tolerations:
+  - effect: NoExecute
+    key: node.kubernetes.io/not-ready
+    operator: Exists
+    tolerationSeconds: 300
+  - effect: NoExecute
+    key: node.kubernetes.io/unreachable
+    operator: Exists
+    tolerationSeconds: 300
+  volumes:
+  - name: kube-api-access-cng5h
+    projected:
+      defaultMode: 420
+      sources:
+      - serviceAccountToken:
+          expirationSeconds: 3607
+          path: token
+      - configMap:
+          items:
+          - key: ca.crt
+            path: ca.crt
+          name: kube-root-ca.crt
+      - downwardAPI:
+          items:
+          - fieldRef:
+              apiVersion: v1
+              fieldPath: metadata.namespace
+            path: namespace
+status:
+  conditions:
+  - lastProbeTime: null
+    lastTransitionTime: "2026-04-02T10:16:44Z"
+    observedGeneration: 1
+    status: "True"
+    type: PodReadyToStartContainers
+  - lastProbeTime: null
+    lastTransitionTime: "2026-04-02T10:16:43Z"
+    observedGeneration: 1
+    status: "True"
+    type: Initialized
+  - lastProbeTime: null
+    lastTransitionTime: "2026-04-02T10:16:44Z"
+    observedGeneration: 1
+    status: "True"
+    type: Ready
+  - lastProbeTime: null
+    lastTransitionTime: "2026-04-02T10:16:44Z"
+    observedGeneration: 1
+    status: "True"
+    type: ContainersReady
+  - lastProbeTime: null
+    lastTransitionTime: "2026-04-02T10:16:43Z"
+    observedGeneration: 1
+    status: "True"
+    type: PodScheduled
+  containerStatuses:
+  - containerID: containerd://0f14eec797f1b9de01fb5a8e37ab88b4b94ff5e95691da09aaeb9d61b74ff788
+    image: docker.io/nicolaka/netshoot:latest
+    imageID: docker.io/nicolaka/netshoot@sha256:47b907d662d139d1e2f22bfe14f4efca1e3f1feed283572f47c970c780c03b61
+    lastState: {}
+    name: netshoot
+    ready: true
+    resources: {}
+    restartCount: 0
+    started: true
+    state:
+      running:
+        startedAt: "2026-04-02T10:16:44Z"
+    user:
+      linux:
+        gid: 0
+        supplementalGroups:
+        - 0
+        - 1
+        - 2
+        - 3
+        - 4
+        - 6
+        - 10
+        - 11
+        - 20
+        - 26
+        - 27
+        uid: 0
+    volumeMounts:
+    - mountPath: /var/run/secrets/kubernetes.io/serviceaccount
+      name: kube-api-access-cng5h
+      readOnly: true
+      recursiveReadOnly: Disabled
+  hostIP: 10.0.0.5
+  hostIPs:
+  - ip: 10.0.0.5
+  observedGeneration: 1
+  phase: Running
+  podIP: 10.42.0.42
+  podIPs:
+  - ip: 10.42.0.42
+  qosClass: BestEffort
+  startTime: "2026-04-02T10:16:43Z"

@@ -1,0 +1,35 @@
+# Phase 11 generated NetworkPolicy: deny attacker namespace traffic to frontend.
+# Incident: {{ incident_id }}
+# Run: {{ run_id }}  Family: {{ family }}  Severity: {{ severity }}
+# Generated UTC: {{ timestamp_utc }}
+# Template: rate_limit_or_deny.yaml.j2
+#
+# Note: Kubernetes NetworkPolicy cannot rate-limit per se; it denies traffic.
+# Real rate-limiting would require Istio EnvoyFilter / mesh policy.
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: phase11-deny-{{ incident_id_short }}
+  namespace: {{ frontend_namespace }}
+  labels:
+    phase11.incident_id: "{{ incident_id }}"
+    phase11.action: "RATE_LIMIT_OR_DENY"
+    phase11.severity: "{{ severity }}"
+    phase11.family: "{{ family }}"
+spec:
+  podSelector:
+    matchLabels:
+      app: frontend
+  policyTypes:
+    - Ingress
+  ingress:
+    - from:
+        - namespaceSelector:
+            matchLabels:
+              kubernetes.io/metadata.name: app
+          podSelector:
+            matchExpressions:
+              - key: app
+                operator: NotIn
+                values:
+                  - {{ attacker_pod_label }}

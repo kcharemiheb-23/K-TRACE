@@ -1,0 +1,25 @@
+# Phase 11 generated NetworkPolicy: isolate the attacker pod.
+# Incident: {{ incident_id }}
+# Run: {{ run_id }}  Family: {{ family }}  Severity: {{ severity }}
+# Generated UTC: {{ timestamp_utc }}
+# Template: isolate_pod.yaml.j2
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: phase11-isolate-{{ incident_id_short }}
+  namespace: {{ target_namespace }}
+  labels:
+    phase11.incident_id: "{{ incident_id }}"
+    phase11.action: "ISOLATE_POD"
+    phase11.severity: "{{ severity }}"
+    phase11.family: "{{ family }}"
+spec:
+  podSelector:
+    matchLabels:
+      app: {{ target_pod_label }}
+  policyTypes:
+    - Ingress
+    - Egress
+  # Empty ingress and egress lists deny all traffic.
+  ingress: []
+  egress: []
