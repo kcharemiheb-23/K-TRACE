@@ -1,0 +1,17 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+
+# Large artifacts and generated data
+artifacts/phase7/raw/
+artifacts/phase7/validation/
+artifacts/phase8/intermediate/
+artifacts/phase8/output/*.csv
+artifacts/phase9/plots/
+artifacts/phase9_v2/plots/
+
+# Keep reports/proofs/scripts/docs, but ignore huge generated raw data
+*.log
+*.tmp
+artifacts/phase10U/vectorstore_v2/
