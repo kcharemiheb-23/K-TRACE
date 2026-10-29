@@ -1,0 +1,203 @@
+{
+  "generated_at_utc": "2026-04-28T08:40:20.905024+00:00",
+  "ledger_path": "./artifacts/phase7/output/run-ledger.csv",
+  "cases_in": "./artifacts/phase10A/corpus/cases",
+  "cases_out": "./artifacts/phase10U/corpus_v2/cases",
+  "run_count": 126,
+  "case_count": 24,
+  "enrichment": [
+    {
+      "run_id": "A1_LOW_005",
+      "in_path": "./artifacts/phase10A/corpus/cases/A1_LOW_005.md",
+      "out_path": "./artifacts/phase10U/corpus_v2/cases/A1_LOW_005.md",
+      "in_chars": 1006,
+      "out_chars": 2559,
+      "used_ledger": true
+    },
+    {
+      "run_id": "A1_MEDIUM_004",
+      "in_path": "./artifacts/phase10A/corpus/cases/A1_MEDIUM_004.md",
+      "out_path": "./artifacts/phase10U/corpus_v2/cases/A1_MEDIUM_004.md",
+      "in_chars": 1015,
+      "out_chars": 2569,
+      "used_ledger": true
+    },
+    {
+      "run_id": "A1_MEDIUM_005",
+      "in_path": "./artifacts/phase10A/corpus/cases/A1_MEDIUM_005.md",
+      "out_path": "./artifacts/phase10U/corpus_v2/cases/A1_MEDIUM_005.md",
+      "in_chars": 1015,
+      "out_chars": 2569,
+      "used_ledger": true
+    },
+    {
+      "run_id": "A2_HIGH_002",
+      "in_path": "./artifacts/phase10A/corpus/cases/A2_HIGH_002.md",
+      "out_path": "./artifacts/phase10U/corpus_v2/cases/A2_HIGH_002.md",
+      "in_chars": 1037,
+      "out_chars": 2517,
+      "used_ledger": true
+    },
+    {
+      "run_id": "A2_MEDIUM_003",
+      "in_path": "./artifacts/phase10A/corpus/cases/A2_MEDIUM_003.md",
+      "out_path": "./artifacts/phase10U/corpus_v2/cases/A2_MEDIUM_003.md",
+      "in_chars": 1043,
+      "out_chars": 2537,
+      "used_ledger": true
+    },
+    {
+      "run_id": "A2_MEDIUM_004",
+      "in_path": "./artifacts/phase10A/corpus/cases/A2_MEDIUM_004.md",
+      "out_path": "./artifacts/phase10U/corpus_v2/cases/A2_MEDIUM_004.md",
+      "in_chars": 1043,
+      "out_chars": 2537,
+      "used_ledger": true
+    },
+    {
+      "run_id": "A3_LOW_002",
+      "in_path": "./artifacts/phase10A/corpus/cases/A3_LOW_002.md",
+      "out_path": "./artifacts/phase10U/corpus_v2/cases/A3_LOW_002.md",
+      "in_chars": 1002,
+      "out_chars": 2581,
+      "used_ledger": true
+    },
+    {
+      "run_id": "A3_LOW_004",
+      "in_path": "./artifacts/phase10A/corpus/cases/A3_LOW_004.md",
+      "out_path": "./artifacts/phase10U/corpus_v2/cases/A3_LOW_004.md",
+      "in_chars": 1003,
+      "out_chars": 2595,
+      "used_ledger": true
+    },
+    {
+      "run_id": "A3_MEDIUM_004",
+      "in_path": "./artifacts/phase10A/corpus/cases/A3_MEDIUM_004.md",
+      "out_path": "./artifacts/phase10U/corpus_v2/cases/A3_MEDIUM_004.md",
+      "in_chars": 1011,
+      "out_chars": 2604,
+      "used_ledger": true
+    },
+    {
+      "run_id": "A4_HIGH_002",
+      "in_path": "./artifacts/phase10A/corpus/cases/A4_HIGH_002.md",
+      "out_path": "./artifacts/phase10U/corpus_v2/cases/A4_HIGH_002.md",
+      "in_chars": 1037,
+      "out_chars": 2535,
+      "used_ledger": true
+    },
+    {
+      "run_id": "A4_LOW_005",
+      "in_path": "./artifacts/phase10A/corpus/cases/A4_LOW_005.md",
+      "out_path": "./artifacts/phase10U/corpus_v2/cases/A4_LOW_005.md",
+      "in_chars": 1034,
+      "out_chars": 2545,
+      "used_ledger": true
+    },
+    {
+      "run_id": "A4_MEDIUM_003",
+      "in_path": "./artifacts/phase10A/corpus/cases/A4_MEDIUM_003.md",
+      "out_path": "./artifacts/phase10U/corpus_v2/cases/A4_MEDIUM_003.md",
+      "in_chars": 1043,
+      "out_chars": 2555,
+      "used_ledger": true
+    },
+    {
+      "run_id": "BENIGN_CONTINUOUS_BROWSE_001",
+      "in_path": "./artifacts/phase10A/corpus/cases/BENIGN_CONTINUOUS_BROWSE_001.md",
+      "out_path": "./artifacts/phase10U/corpus_v2/cases/BENIGN_CONTINUOUS_BROWSE_001.md",
+      "in_chars": 1017,
+      "out_chars": 2500,
+      "used_ledger": true
+    },
+    {
+      "run_id": "BENIGN_CONTINUOUS_BROWSE_006",
+      "in_path": "./artifacts/phase10A/corpus/cases/BENIGN_CONTINUOUS_BROWSE_006.md",
+      "out_path": "./artifacts/phase10U/corpus_v2/cases/BENIGN_CONTINUOUS_BROWSE_006.md",
+      "in_chars": 1017,
+      "out_chars": 2500,
+      "used_ledger": true
+    },
+    {
+      "run_id": "BENIGN_CONTINUOUS_BROWSE_010",
+      "in_path": "./artifacts/phase10A/corpus/cases/BENIGN_CONTINUOUS_BROWSE_010.md",
+      "out_path": "./artifacts/phase10U/corpus_v2/cases/BENIGN_CONTINUOUS_BROWSE_010.md",
+      "in_chars": 1017,
+      "out_chars": 2500,
+      "used_ledger": true
+    },
+    {
+      "run_id": "BENIGN_CONTINUOUS_NORMAL_005",
+      "in_path": "./artifacts/phase10A/corpus/cases/BENIGN_CONTINUOUS_NORMAL_005.md",
+      "out_path": "./artifacts/phase10U/corpus_v2/cases/BENIGN_CONTINUOUS_NORMAL_005.md",
+      "in_chars": 1017,
+      "out_chars": 2498,
+      "used_ledger": true
+    },
+    {
+      "run_id": "BENIGN_CONTINUOUS_NORMAL_006",
+      "in_path": "./artifacts/phase10A/corpus/cases/BENIGN_CONTINUOUS_NORMAL_006.md",
+      "out_path": "./artifacts/phase10U/corpus_v2/cases/BENIGN_CONTINUOUS_NORMAL_006.md",
+      "in_chars": 1017,
+      "out_chars": 2498,
+      "used_ledger": true
+    },
+    {
+      "run_id": "BENIGN_CONTINUOUS_NORMAL_008",
+      "in_path": "./artifacts/phase10A/corpus/cases/BENIGN_CONTINUOUS_NORMAL_008.md",
+      "out_path": "./artifacts/phase10U/corpus_v2/cases/BENIGN_CONTINUOUS_NORMAL_008.md",
+      "in_chars": 1017,
+      "out_chars": 2498,
+      "used_ledger": true
+    },
+    {
+      "run_id": "BENIGN_CONTROLLED_IDLE_002",
+      "in_path": "./artifacts/phase10A/corpus/cases/BENIGN_CONTROLLED_IDLE_002.md",
+      "out_path": "./artifacts/phase10U/corpus_v2/cases/BENIGN_CONTROLLED_IDLE_002.md",
+      "in_chars": 1011,
+      "out_chars": 2470,
+      "used_ledger": true
+    },
+    {
+      "run_id": "BENIGN_CONTROLLED_IDLE_009",
+      "in_path": "./artifacts/phase10A/corpus/cases/BENIGN_CONTROLLED_IDLE_009.md",
+      "out_path": "./artifacts/phase10U/corpus_v2/cases/BENIGN_CONTROLLED_IDLE_009.md",
+      "in_chars": 1011,
+      "out_chars": 2470,
+      "used_ledger": true
+    },
+    {
+      "run_id": "BENIGN_CONTROLLED_NORMAL_004",
+      "in_path": "./artifacts/phase10A/corpus/cases/BENIGN_CONTROLLED_NORMAL_004.md",
+      "out_path": "./artifacts/phase10U/corpus_v2/cases/BENIGN_CONTROLLED_NORMAL_004.md",
+      "in_chars": 1017,
+      "out_chars": 2498,
+      "used_ledger": true
+    },
+    {
+      "run_id": "BENIGN_CONTROLLED_PEAK_004",
+      "in_path": "./artifacts/phase10A/corpus/cases/BENIGN_CONTROLLED_PEAK_004.md",
+      "out_path": "./artifacts/phase10U/corpus_v2/cases/BENIGN_CONTROLLED_PEAK_004.md",
+      "in_chars": 1011,
+      "out_chars": 2490,
+      "used_ledger": true
+    },
+    {
+      "run_id": "BENIGN_CONTROLLED_PEAK_006",
+      "in_path": "./artifacts/phase10A/corpus/cases/BENIGN_CONTROLLED_PEAK_006.md",
+      "out_path": "./artifacts/phase10U/corpus_v2/cases/BENIGN_CONTROLLED_PEAK_006.md",
+      "in_chars": 1011,
+      "out_chars": 2490,
+      "used_ledger": true
+    },
+    {
+      "run_id": "BENIGN_CONTROLLED_PEAK_008",
+      "in_path": "./artifacts/phase10A/corpus/cases/BENIGN_CONTROLLED_PEAK_008.md",
+      "out_path": "./artifacts/phase10U/corpus_v2/cases/BENIGN_CONTROLLED_PEAK_008.md",
+      "in_chars": 1011,
+      "out_chars": 2490,
+      "used_ledger": true
+    }
+  ],
+  "missing_in_ledger": []
+}

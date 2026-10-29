@@ -1,0 +1,17 @@
+query_id,run_id,query_type,expected_family,precision_at_5,recall_at_5,mrr,cross_class_contamination_at_5,self_hit_ratio_at_5,weakness_type,interpretation
+Q001,A1_LOW_005,case_id_query,A1,0.2,0.1,0.3333333333333333,0.8,0.2,low_precision_or_recall_or_high_contamination,Retriever may be returning weak or class-contaminated evidence for this query.
+Q003,A1_MEDIUM_004,case_id_query,A1,0.2,0.1,0.3333333333333333,0.8,0.0,low_precision_or_recall_or_high_contamination,Retriever may be returning weak or class-contaminated evidence for this query.
+Q005,A2_HIGH_002,case_id_query,A2,0.2,0.1,0.25,0.8,0.2,low_precision_or_recall_or_high_contamination,Retriever may be returning weak or class-contaminated evidence for this query.
+Q007,A2_MEDIUM_003,case_id_query,A2,0.0,0.0,0.0,1.0,0.0,low_precision_or_recall_or_high_contamination,Retriever may be returning weak or class-contaminated evidence for this query.
+Q009,A3_LOW_002,case_id_query,A3,0.2,0.09090909090909091,0.5,0.8,0.0,low_precision_or_recall_or_high_contamination,Retriever may be returning weak or class-contaminated evidence for this query.
+Q011,A3_MEDIUM_004,case_id_query,A3,0.4,0.18181818181818182,0.5,0.6,0.0,low_precision_or_recall_or_high_contamination,Retriever may be returning weak or class-contaminated evidence for this query.
+Q013,A4_LOW_005,case_id_query,A4,0.2,0.1,1.0,0.8,0.2,low_precision_or_recall_or_high_contamination,Retriever may be returning weak or class-contaminated evidence for this query.
+Q014,A4_LOW_005,semantic_family_query,A4,0.4,0.2,1.0,0.6,0.2,low_precision_or_recall_or_high_contamination,Retriever may be returning weak or class-contaminated evidence for this query.
+Q015,A4_MEDIUM_003,case_id_query,A4,0.2,0.1,0.5,0.8,0.0,low_precision_or_recall_or_high_contamination,Retriever may be returning weak or class-contaminated evidence for this query.
+Q016,A4_MEDIUM_003,semantic_family_query,A4,0.4,0.2,1.0,0.6,0.0,low_precision_or_recall_or_high_contamination,Retriever may be returning weak or class-contaminated evidence for this query.
+Q017,BENIGN_CONTINUOUS_BROWSE_001,case_id_query,BENIGN,0.6,0.07317073170731707,1.0,0.4,0.2,low_precision_or_recall_or_high_contamination,Retriever may be returning weak or class-contaminated evidence for this query.
+Q018,BENIGN_CONTINUOUS_BROWSE_001,semantic_family_query,BENIGN,0.8,0.0975609756097561,1.0,0.0,0.2,low_precision_or_recall_or_high_contamination,Retriever may be returning weak or class-contaminated evidence for this query.
+Q019,BENIGN_CONTINUOUS_BROWSE_006,case_id_query,BENIGN,0.6,0.07317073170731707,1.0,0.4,0.2,low_precision_or_recall_or_high_contamination,Retriever may be returning weak or class-contaminated evidence for this query.
+Q020,BENIGN_CONTINUOUS_BROWSE_006,semantic_family_query,BENIGN,0.8,0.0975609756097561,1.0,0.0,0.2,low_precision_or_recall_or_high_contamination,Retriever may be returning weak or class-contaminated evidence for this query.
+Q021,BENIGN_CONTROLLED_IDLE_002,case_id_query,BENIGN,1.0,0.12195121951219512,1.0,0.0,0.2,low_precision_or_recall_or_high_contamination,Retriever may be returning weak or class-contaminated evidence for this query.
+Q022,BENIGN_CONTROLLED_IDLE_002,semantic_family_query,BENIGN,0.8,0.0975609756097561,1.0,0.0,0.0,low_precision_or_recall_or_high_contamination,Retriever may be returning weak or class-contaminated evidence for this query.

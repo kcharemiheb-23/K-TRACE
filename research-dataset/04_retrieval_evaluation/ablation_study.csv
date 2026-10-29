@@ -1,0 +1,6 @@
+lever,mode,reciprocal_rank_mean,reciprocal_rank_delta_vs_prev,precision_at_5_mean,precision_at_5_delta_vs_prev,recall_at_5_mean,recall_at_5_delta_vs_prev,f1_at_5_mean,f1_at_5_delta_vs_prev,cross_class_contamination_at_5_mean,cross_class_contamination_at_5_delta_vs_prev
+"Phase 10R baseline (dense, Phase 10A corpus)",baseline,0.7311,0.0,0.5182,0.0,0.1747,0.0,0.2466,0.0,0.4182,0.0
++ corpus enrichment (Part A),dense_only,0.6444,-0.0866,0.5455,0.0273,0.1724,-0.0023,0.2455,-0.0011,0.2455,-0.1727
+lexical-only on enriched corpus,bm25_only,0.9545,0.3101,0.6091,0.0636,0.2076,0.0353,0.292,0.0465,0.2,-0.0455
++ hybrid fusion via Reciprocal Rank Fusion,rrf,0.8674,-0.0871,0.5909,-0.0182,0.1985,-0.0091,0.2799,-0.0121,0.1909,-0.0091
++ metadata-aware reranking,rrf_plus_metadata_rerank,1.0,0.1326,0.7091,0.1182,0.2465,0.048,0.3457,0.0658,0.1091,-0.0818
