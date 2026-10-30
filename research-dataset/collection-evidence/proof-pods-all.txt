@@ -1,0 +1,40 @@
+NAMESPACE      NAME                                             READY   STATUS      RESTARTS       AGE    IP              NODE          NOMINATED NODE   READINESS GATES
+app            adservice-77856d75bd-27xsv                       2/2     Running     1 (142m ago)   21h    10.42.2.20      k8s-worker2   <none>           <none>
+app            cartservice-694675bf79-zdzqv                     2/2     Running     1 (143m ago)   21h    10.42.1.14      k8s-worker1   <none>           <none>
+app            checkoutservice-558f875786-x9b6l                 2/2     Running     1 (143m ago)   21h    10.42.2.19      k8s-worker2   <none>           <none>
+app            currencyservice-5bb8fccbd4-7wmw4                 2/2     Running     1 (143m ago)   21h    10.42.1.15      k8s-worker1   <none>           <none>
+app            emailservice-88458fb74-g5hhd                     2/2     Running     2 (143m ago)   21h    10.42.0.20      k8s-master    <none>           <none>
+app            falco-test                                       1/1     Running     0              46m    10.42.0.26      k8s-master    <none>           <none>
+app            frontend-858444868b-qbhjq                        2/2     Running     0              21h    10.42.0.21      k8s-master    <none>           <none>
+app            loadgenerator-667854bd98-z66cv                   2/2     Running     0              21h    10.42.2.24      k8s-worker2   <none>           <none>
+app            paymentservice-7f59bf9594-7ccqd                  2/2     Running     2 (142m ago)   21h    10.42.2.21      k8s-worker2   <none>           <none>
+app            productcatalogservice-6d86b9fbfd-f9vhx           2/2     Running     1 (142m ago)   21h    10.42.2.22      k8s-worker2   <none>           <none>
+app            recommendationservice-6477c4fc4-4dxd4            2/2     Running     3 (142m ago)   21h    10.42.2.23      k8s-worker2   <none>           <none>
+app            redis-cart-7665485897-jg92t                      2/2     Running     0              21h    10.42.1.16      k8s-worker1   <none>           <none>
+app            shippingservice-7866894bcd-69w5b                 2/2     Running     0              21h    10.42.0.22      k8s-master    <none>           <none>
+attacks        netshoot                                         1/1     Running     0              3h6m   10.42.0.23      k8s-master    <none>           <none>
+falco          falco-f6qrj                                      2/2     Running     0              22h    10.42.0.13      k8s-master    <none>           <none>
+falco          falco-h29pp                                      2/2     Running     0              22h    10.42.1.9       k8s-worker1   <none>           <none>
+falco          falco-v7zlj                                      2/2     Running     0              22h    10.42.2.13      k8s-worker2   <none>           <none>
+istio-system   istio-ingressgateway-8559d66887-c7kt8            1/1     Running     0              21h    10.42.0.14      k8s-master    <none>           <none>
+istio-system   istiod-98f9b79f8-rl42l                           1/1     Running     0              21h    10.42.1.10      k8s-worker1   <none>           <none>
+kube-system    coredns-695cbbfcb9-64l49                         1/1     Running     0              30h    10.42.0.5       k8s-master    <none>           <none>
+kube-system    helm-install-traefik-crd-pjz5d                   0/1     Completed   0              30h    10.42.0.6       k8s-master    <none>           <none>
+kube-system    helm-install-traefik-hx76n                       0/1     Completed   2              30h    10.42.0.4       k8s-master    <none>           <none>
+kube-system    local-path-provisioner-546dfc6456-bzngx          1/1     Running     0              30h    10.42.0.3       k8s-master    <none>           <none>
+kube-system    metrics-server-c8774f4f4-knmb7                   1/1     Running     0              30h    10.42.0.2       k8s-master    <none>           <none>
+kube-system    svclb-frontend-external-5d3408e9-dtnm5           0/1     Pending     0              27h    <none>          <none>        <none>           <none>
+kube-system    svclb-frontend-external-5d3408e9-j6b8v           0/1     Pending     0              27h    <none>          <none>        <none>           <none>
+kube-system    svclb-frontend-external-5d3408e9-nvn92           0/1     Pending     0              27h    <none>          <none>        <none>           <none>
+kube-system    svclb-istio-ingressgateway-64ea6265-7cxq7        0/3     Pending     0              21h    <none>          <none>        <none>           <none>
+kube-system    svclb-istio-ingressgateway-64ea6265-95szm        0/3     Pending     0              21h    <none>          <none>        <none>           <none>
+kube-system    svclb-istio-ingressgateway-64ea6265-cpnxk        0/3     Pending     0              21h    <none>          <none>        <none>           <none>
+kube-system    svclb-traefik-d951be73-5pcg5                     2/2     Running     0              29h    10.42.1.2       k8s-worker1   <none>           <none>
+kube-system    svclb-traefik-d951be73-g2rh5                     2/2     Running     0              29h    10.42.2.2       k8s-worker2   <none>           <none>
+kube-system    svclb-traefik-d951be73-s4jgh                     2/2     Running     0              30h    10.42.0.7       k8s-master    <none>           <none>
+kube-system    traefik-788bc4688c-krpd4                         1/1     Running     0              30h    10.42.0.8       k8s-master    <none>           <none>
+monitoring     prometheus-kube-state-metrics-6659c87c4d-7h69f   1/1     Running     3 (142m ago)   23h    10.42.2.12      k8s-worker2   <none>           <none>
+monitoring     prometheus-prometheus-node-exporter-cwpnk        1/1     Running     1 (143m ago)   23h    192.168.30.11   k8s-worker1   <none>           <none>
+monitoring     prometheus-prometheus-node-exporter-fvgbj        1/1     Running     0              23h    192.168.30.10   k8s-master    <none>           <none>
+monitoring     prometheus-prometheus-node-exporter-lw24x        1/1     Running     1 (142m ago)   23h    192.168.30.12   k8s-worker2   <none>           <none>
+monitoring     prometheus-server-7dbcbc95f9-lttt9               2/2     Running     2 (143m ago)   23h    10.42.1.8       k8s-worker1   <none>           <none>
